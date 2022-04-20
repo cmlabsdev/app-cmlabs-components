@@ -1,0 +1,69 @@
+.vc-popover-content,
+.cm-date-picker.vc-container,
+.cm-time-picker .vc-time-picker {
+  box-shadow: 0px 0px 16px 0px #00000014 !important;
+}
+
+body.dark .vc-container {
+  --blue-600: #74D6FD !important;
+}
+
+.vc-container {
+  --blue-600: #18A0FB !important;
+
+  font-family: "Roboto", sans-serif !important;
+  @apply !border-0 !border-transparent !text-dark-60 dark:!text-gray-60 !bg-white dark:!bg-dark-80;
+}
+
+.vc-popover-caret {
+  @apply !bg-white dark:!bg-dark-80;
+}
+
+.vc-day-content.vc-focusable.is-disabled {
+   /*  */
+}
+
+.vc-weeks {
+  @apply !p-4;
+}
+
+.vc-time-picker {
+  @apply !p-4 !border-t !border-gray-60;
+}
+
+.cm-time-picker .vc-time-picker {
+  @apply !border-0 !border-transparent;
+}
+
+.vc-weekday,
+.vc-year {
+  @apply !text-dark-60;
+}
+
+.vc-time-icon {
+  @apply !text-gray-80;
+}
+
+.vc-select select {
+  @apply !h-[28px] !text-base !bg-transparent !border !border-gray-100 !px-2 !rounded-sm;
+}
+
+.vc-am-pm {
+  @apply !bg-transparent !px-0.5 !rounded-sm !h-[28px] !border !border-gray-100;
+}
+
+.vc-am-pm button {
+  @apply !text-dark-60 !text-base !px-2 !bg-transparent !border !border-transparent !rounded-sm;
+}
+
+.vc-am-pm button.active {
+  @apply !bg-primary-60 !py-0.5 px-1 !rounded-sm !border !border-primary-60 !text-white !text-sm !font-medium;
+}
+
+.vc-disabled {
+  @apply !opacity-100 !pointer-events-none;
+}
+
+.vc-select-arrow {
+  @apply !text-dark-60 !-translate-x-px;
+}

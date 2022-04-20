@@ -1,0 +1,89 @@
+/* 
+ * ==================================================
+ * Remove the default arrow on input type numbers
+ * ==================================================
+ */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* 
+ * ==================================================
+ * Vue transitions name
+ * ==================================================
+ */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .4s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-in-enter-active,
+.fade-in-leave-active {
+  pointer-events: none;
+  transition: opacity .15s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+  opacity: 0;
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  transition-duration: 0.4s;
+  transition-property: height, opacity;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.expand-enter,
+.expand-leave-active {
+  opacity: 0;
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+}
+
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.3s;
+}
+
+.page-enter,
+.page-leave-to,
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}
