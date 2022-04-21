@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply text-base scroll-smooth;
+  }
+
+  body {
+    @apply text-dark-60 bg-white;
+  }
+
+  body.dark {
+    @apply text-gray-60 bg-dark-100;
+  },
+
+  body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+  body::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.5s;
+  }
+  .page-enter,
+  .page-leave-to {
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .cm-transition {
+    @apply transition-all ease-out duration-300
+  }
+  .cm-no-shadow {
+    box-shadow: unset;
+  }
+  .cm-footer-shadow {
+    box-shadow: 0px -10px 24px 0px #0633510D;
+  }
+  .cm-domain-setting-card-shadow {
+    box-shadow: 0px 0px 1px 0px #091E424F;
+    box-shadow: 0px 3px 5px 0px #091E4233;
+  }
+  .cm-navigation-shadow {
+    box-shadow: 0px 10px 24px 0px #0633510D;
+  }
+  .cm-auth-form-shadow {
+    box-shadow: 0px 12px 29px -10px #06335140;
+  }
+}
