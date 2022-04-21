@@ -79,6 +79,14 @@ export default {
       default: 'h-[250px]'
     },
     /**
+     * Maximum amount of tag.
+     * When reach max, a toast will be called.
+     */
+    max: {
+      type: Number,
+      default: 0
+    },
+    /**
      * The padding class.
      */
     padding: {
@@ -155,8 +163,19 @@ export default {
     async onEnter () {
       event.preventDefault()
 
+      if (this.max && this.tags.length >= this.max) {
+        return this.$cmToast({
+          title: "Maximum number of keyword exceeded.",
+          text: "To add more keyword, please visit the advanced version page.",
+          variant: "warning"
+        })
+      }
+
       if (!this.serializedTagInput.length) { return false }
-      const inputs = this.serializedTagInput
+      let inputs = this.serializedTagInput
+
+      if (this.max) { inputs = [...inputs].splice(0, this.max) }
+      
       const tags = [...this.tags]
 
       for (let i = 0; i < inputs.length; i++) {
