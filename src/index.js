@@ -18,10 +18,6 @@ async function CMLABSComponent(moduleOptions) {
     config: defaultTailwindConfig(nuxt.options),
   });
 
-  // Installing the component prefixes
-  options.prefix = String(options.prefix)?.toLowerCase() || "cm";
-  const { prefix } = options;
-
   const configPath = nuxt.resolver.resolveAlias(options.configPath);
   const cssPath = nuxt.resolver.resolveAlias(options.cssPath);
   
@@ -49,7 +45,7 @@ async function CMLABSComponent(moduleOptions) {
   for (const plugin of pluginsToSync) {
     this.addPlugin({
       src: resolve(__dirname, plugin),
-      fileName: join(prefix, plugin),
+      fileName: join("@cmlabs", plugin),
       options
     });
   }
