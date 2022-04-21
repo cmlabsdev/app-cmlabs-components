@@ -5,7 +5,7 @@
         <div class="flex items-center gap-4">
           <LogoCmlabs />
           <h1 class="font-bold text-h6 text-primary-60"> CMLABS Components </h1>
-          <cm-badge size="sm" type="pill"> v.1.1.0 </cm-badge>
+          <cm-badge size="sm" type="pill"> v.1.1.2 </cm-badge>
         </div>
 
         <div class="flex items-center divide-x divide-gray-80">
