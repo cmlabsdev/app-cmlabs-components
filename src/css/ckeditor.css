@@ -1,0 +1,66 @@
+@import 'ckeditor-tailwind-reset/ckeditor-tailwind-reset';
+/* .ck-content > blockquote,
+.ck-content > dl,
+.ck-content > dd,
+.ck-content > h1,
+.ck-content > h2,
+.ck-content > h3,
+.ck-content > h4,
+.ck-content > h5,
+.ck-content > h6,
+.ck-content > hr,
+.ck-content > figure,
+.ck-content > p,
+.ck-content > pre {
+  margin: revert;
+}
+
+.ck-content > ol,
+.ck-content > ul {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
+}
+
+.ck-content > table {
+  border-collapse: revert;
+}
+
+.ck-content > h1,
+.ck-content > h2,
+.ck-content > h3,
+.ck-content > h4,
+.ck-content > h5,
+.ck-content > h6 {
+  font-size: revert;
+  font-weight: revert;
+} */
+
+.ck-rounded-corners.ck.ck-editor__top.ck-sticky-panel.ck-toolbar {
+  @apply !rounded-[3px];
+}
+
+.ck-rounded-corners.ck.ck-editor__main>.ck-editor__editable,.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+  @apply !rounded-b-[3px];
+}
+
+.ck.ck-editor__editable > .ck-placeholder::before {
+  @apply text-gray-80 dark:text-gray-110;
+}
+
+.ck-editor__editable {
+  @apply !min-h-[280px];
+}
+
+figcaption.ck-editor__editable {
+  @apply !min-h-0;
+}
+
+.ck-focused { 
+  @apply !border-gray-100 dark:!border-dark-40 !shadow-none;
+}
+
+.ck.ck-toolbar,
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  @apply !border-gray-100 dark:!border-dark-40;
+}
