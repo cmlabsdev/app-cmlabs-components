@@ -26,11 +26,6 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    "~/assets/css/base.css"
-  ],
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // Docs site here
