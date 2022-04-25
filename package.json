@@ -6,7 +6,8 @@
   "scripts": {
     "docs": "nuxt generate docs",
     "docs:dev": "nuxt docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm version minor && npm publish --access public && git push && git push --tags"
   },
   "keywords": [],
   "author": "Bram Adl",
