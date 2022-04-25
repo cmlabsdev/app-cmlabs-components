@@ -38,6 +38,7 @@ async function CMLABSComponent(moduleOptions) {
   await this.addModule("@nuxtjs/moment");
   
   nuxt.options.css.unshift(resolve(__dirname, "css", "base.css"));
+  nuxt.options.css.unshift(resolve(__dirname, "css", "ckeditor.css"));
   nuxt.options.css.unshift(resolve(__dirname, "css", "vcalendar.css"));
 
   // Installing the plugins
