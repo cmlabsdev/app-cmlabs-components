@@ -9,8 +9,8 @@
 
 > CMLABS Components Design System **only** for [NuxtJS 2](https://nuxtjs.org) project using [TailwindCSS](https://tailwindcss.com/) as the base CSS Utility Framework.
 
-- [✨ &nbsp;Release Notes](https://components.cmlabs.co/docs/getting-started/releases)
-- [📖 &nbsp;Documentation](https://components.cmlabs.co/docs/getting-started/installation)
+- [✨ &nbsp;Release Notes](https://design.cmlabs.co/docs/getting-started/releases)
+- [📖 &nbsp;Documentation](https://design.cmlabs.co/docs/getting-started/installation)
 
 ## Introduction
 This package uses [@nuxt/postcss8](https://www.npmjs.com/package/@nuxt/postcss8) (for [`TailwindCSS`] requirement) and [@nuxtjs/moment](https://www.npmjs.com/package/@nuxtjs/moment) (for `datepicker` component) under the hood and register them automatically so it is encouraged for you not to install these packages in your project.
@@ -84,7 +84,7 @@ yarn add @nuxtjs/tailwindcss
 
 That's it! You can now use Tailwind classes and CMLABS components in your Nuxt app ✨
 
-[📖 &nbsp;Read more about the configuration](https://components.cmlabs.co/docs)
+[📖 &nbsp;Read more about the configuration](https://design.cmlabs.co/docs)
 
 ## Usage
 
@@ -120,7 +120,7 @@ Make sure to add the [boxicons](https://boxicons.com/) cdn in order to use `bx-i
 </cm-button>
 ```
 
-[📖 &nbsp;Read more about the components](https://components.cmlabs.co/docs/components/accordion)
+[📖 &nbsp;Read more about the components](https://design.cmlabs.co/docs/components/accordion)
 
 ## License
 [MIT License](./License)

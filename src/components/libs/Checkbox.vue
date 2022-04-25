@@ -4,7 +4,7 @@
     :class="[gapClass, disabled ? 'cursor-not-allowed' : 'cursor-pointer', disabledClass]"
   >
     <input
-      class="absolute flex-shrink-0 w-0 h-0 peer invisible"
+      class="absolute flex-shrink-0 w-0 h-0 peer opacity-0"
       :checked="shouldBeChecked"
       :disabled="disabled"
       type="checkbox"

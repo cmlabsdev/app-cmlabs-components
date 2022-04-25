@@ -1,0 +1,46 @@
+name: Build and Deploy to Amazon S3
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install NPM Dependencies
+        run: npm ci --prefer-offline -no-audit
+
+      - name: Setup Node version 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Build application
+        run: npm run generate
+
+      - name: Upload dist folder to S3 and invalidate Cloudfront
+        uses: reggionick/s3-deploy@v3
+        with:
+          # The folder to upload
+          folder: docs/dist
+          # The destination bucket
+          bucket: ${{ secrets.AWS_BUCKET_NAME }}
+          # The destination bucket region
+          bucket-region: ${{ secrets.AWS_BUCKET_REGION }}
+          # The Cloudfront distribution ID to invalidate
+          dist-id: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+          # The Cloudfront distribution path(s) to invalidate
+          invalidation: /*
+          # Removes files in S3, that are not available in the local copy of the directory
+          delete-removed: true
+          # Use this parameter to specify Cache-Control: no-cache, no-store, must-revalidate header
+          no-cache: true
