@@ -1,6 +1,6 @@
 {
   "name": "@cmlabs/components",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Official CMLABS Component Library",
   "main": "src/index.js",
   "scripts": {
