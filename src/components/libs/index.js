@@ -17,6 +17,7 @@ import DateTimePicker from "./DateTimePicker.vue";
 import Dropdown from "./Dropdown.vue";
 import DropdownCard from "./DropdownCard.vue";
 import DropdownToggler from "./DropdownToggler.vue";
+import Editor from "./Editor.vue";
 import FormControl from "./FormControl.vue";
 import FormError from "./FormError.vue";
 import FormGroup from "./FormGroup.vue";
@@ -65,6 +66,7 @@ export default {
   Dropdown,
   DropdownCard,
   DropdownToggler,
+  Editor,
   FormControl,
   FormError,
   FormGroup,
