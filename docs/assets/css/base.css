@@ -1,0 +1,3 @@
+.code-badge {
+  @apply bg-gray-60 py-1 px-2 rounded;
+}

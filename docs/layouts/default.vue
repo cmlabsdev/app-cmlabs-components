@@ -104,7 +104,6 @@ export default {
         gettingStarted: [
           { to: "/docs/getting-started/installation", label: "Installation" },
           { to: "/docs/getting-started/editor-setup", label: "Editor Setup" },
-          { to: "/docs/getting-started/browser-support", label: "Browser Support" },
           { to: "/docs/getting-started/release-notes", label: "Release Notes" },
           { to: "/docs/getting-started/upgrade-guide", label: "Upgrade Guide" },
         ],

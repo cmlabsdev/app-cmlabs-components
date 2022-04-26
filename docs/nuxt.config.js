@@ -24,14 +24,23 @@ export default {
       }
     ]
   },
+  
+  // CSS Files to bundle: https://go.nuxtjs.dev/css
+  css: [
+    '~/assets/css/base.css',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
+  modules: [
     // Docs site here
     CMLABSComponent
+  ],
+
+  plugins: [
+    '~/plugins/vue-code-highlight.js'
   ],
 
   // Router configuration: https://go.nuxtjs.dev/router
