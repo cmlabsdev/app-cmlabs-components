@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full overflow-auto"
-    :class="{ 'shadow': theme === 'base' }"
+    :class="{ 'shadow': theme === 'base' && !noShadow }"
   >
     <table class="table-auto w-full overflow-x-auto">
       <thead>
@@ -140,6 +140,13 @@ export default {
      * Remove padding from the table columns.
      */
     noColumnPadding: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Display table with no shadow.
+     */
+    noShadow: {
       type: Boolean,
       default: false
     },
