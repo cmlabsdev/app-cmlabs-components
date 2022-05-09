@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    class="text-dark-40 hover:text-dark-60 transition ease-out duration-300"
+    class="text-dark-40 dark:text-gray-10 hover:text-dark-60 transition ease-out duration-300"
     :class="activeClass"
     :to="to"
   >

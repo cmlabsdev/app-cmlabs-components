@@ -4,7 +4,7 @@
       <h1 class="font-bold text-h2">
         Upgrade Guide
       </h1>
-      <p class="text-md text-dark-10">
+      <p class="text-md text-dark-10 dark:text-gray-40">
         Upgrading the package on major updates.
       </p>
     </header>

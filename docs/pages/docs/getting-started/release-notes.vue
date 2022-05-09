@@ -4,7 +4,7 @@
       <h1 class="font-bold text-h2">
         Release Notes
       </h1>
-      <p class="text-md text-dark-10">
+      <p class="text-md text-dark-10 dark:text-gray-40">
         Logs of the github releases and tags versioning.
       </p>
     </header>

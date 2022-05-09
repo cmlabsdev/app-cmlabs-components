@@ -1,6 +1,6 @@
 <template>
-  <main class="w-full min-h-screen flex flex-col bg-gray-30 overflow-hidden">
-    <header class="w-full h-20 flex-shrink-0 bg-white">
+  <main class="w-full min-h-screen flex flex-col bg-gray-30 overflow-hidden dark:bg-dark-90 dark:text-gray-10">
+    <header class="w-full h-20 flex-shrink-0 bg-white dark:bg-dark-100">
       <div class="h-full container mx-auto flex items-center justify-between px-10">
         <div class="flex items-center gap-4">
           <LogoCmlabs />
@@ -22,8 +22,12 @@
             </nav>
           </div>
           <div class="flex items-center gap-8 pl-8">
-            <cm-icon class="text-h6 text-gray-80" icon="bxs-sun" />
-            <cm-icon class="text-h6 text-gray-80" icon="bxl-github" />
+            <button class="flex items-center justify-center" @click="toggleDarkMode">
+              <cm-icon class="text-h6 text-gray-80" :icon="theme" />
+            </button>
+            <a class="flex items-center justify-center" href="https://github.com/cmlabsdev/app-cmlabs-components" target="_blank">
+              <cm-icon class="text-h6 text-gray-80" icon="bxl-github" />
+            </a>
           </div>
         </div>
       </div>
@@ -103,6 +107,7 @@ export default {
         { to: "/examples", label: "Examples" },
         { to: "/playground", label: "Playground" },
       ],
+      darkTheme: false,
       navigationLinks: {
         gettingStarted: [
           { to: "/docs/getting-started/installation", label: "Installation" },
@@ -143,6 +148,19 @@ export default {
           { to: "https://v3.cmlabs.dev", label: "CMLABS Analytics" },
         ]
       }
+    }
+  },
+
+  computed: {
+    theme() {
+      return this.darkTheme ? "bxs-moon" : "bxs-sun";
+    }
+  },
+
+  methods: {
+    toggleDarkMode() {
+      document.documentElement.classList.toggle('dark')
+      this.darkTheme = !this.darkTheme
     }
   }
 }

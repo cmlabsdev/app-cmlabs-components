@@ -2,7 +2,7 @@
   <li class="ml-2">
     <component
       :is="tag"
-      class="py-1 px-2 text-base text-dark-40 hover:text-dark-60 rounded transition ease-out duration-300"
+      class="py-1 px-2 text-base text-dark-40 dark:text-gray-60 hover:text-dark-60 dark:hover:text-gray-10 rounded transition ease-out duration-300"
       :class="activeClass"
       v-bind="link"
     >

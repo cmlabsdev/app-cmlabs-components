@@ -4,7 +4,7 @@
       <h1 class="font-bold text-h2">
         Typography
       </h1>
-      <p class="text-md text-dark-10">
+      <p class="text-md text-dark-10 dark:text-gray-40">
         Theme and CMLABS texts guidelines.
       </p>
     </header>
@@ -12,12 +12,12 @@
     <hr class="text-gray-60" />
 
     <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
-      <p class="text-md text-dark-10">
+      <p class="text-md text-dark-10 dark:text-gray-40">
         All classes are applicable for use with <code>text-${size}</code>, <code>font-${family|weight}</code>,  and any specific tailwind
         classes which support text utility.
       </p>
 
-      <h2> Example Usage </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Example Usage </h2>
 
       <p v-highlight>
         <pre class="language-html"><code>&ltdiv class="text-sm"&gt; Small Text &lt;/div&gt;</code>
@@ -25,9 +25,9 @@
 <code>&ltarticle class="font-serif"&gt; Show serif family class &lt;/article&gt;</code></pre>
       </p>
       
-      <h2 class="text-dark-60"> Heading 1 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 1 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h1">Font Bold Text h1</p>
           <code>.font-bold.text-h1</code>
@@ -50,9 +50,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Heading 2 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 2 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h2">Font Bold Text h2</p>
           <code>.font-bold.text-h2</code>
@@ -75,9 +75,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Heading 3 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 3 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h3">Font Bold Text h3</p>
           <code>.font-bold.text-h3</code>
@@ -100,9 +100,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Heading 4 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 4 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h4">Font Bold Text h4</p>
           <code>.font-bold.text-h4</code>
@@ -125,9 +125,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Heading 5 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 5 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h5">Font Bold Text h5</p>
           <code>.font-bold.text-h5</code>
@@ -150,9 +150,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Heading 6 </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Heading 6 </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-h6">Font Bold Text h6</p>
           <code>.font-bold.text-h6</code>
@@ -175,9 +175,9 @@
         </div>
       </div>
       
-      <h2 class="text-dark-60"> Text Extra Large </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Extra Large </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-xl">Font Bold Text xl</p>
           <code>.font-bold.text-xl</code>
@@ -200,9 +200,9 @@
         </div>
       </div>
 
-      <h2 class="text-dark-60"> Text Large </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Large </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-lg">Font Bold Text lg</p>
           <code>.font-bold.text-lg</code>
@@ -225,9 +225,9 @@
         </div>
       </div>
 
-      <h2 class="text-dark-60"> Text Medium </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Medium </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-md">Font Bold Text md</p>
           <code>.font-bold.text-md</code>
@@ -250,9 +250,9 @@
         </div>
       </div>
 
-      <h2 class="text-dark-60"> Text Base </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Base </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold">Font Bold Text default | base</p>
           <code>.font-bold</code>
@@ -275,9 +275,9 @@
         </div>
       </div>
 
-      <h2 class="text-dark-60"> Text Small </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Small </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-sm">Font Bold Text sm</p>
           <code>.font-bold.text-sm</code>
@@ -300,9 +300,9 @@
         </div>
       </div>
 
-      <h2 class="text-dark-60"> Text Extra Small </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Text Extra Small </h2>
 
-      <div>
+      <div class="dark:text-gray-40">
         <div class="flex items-center justify-between">
           <p class="font-bold text-xs">Font Bold Text xs</p>
           <code>.font-bold.text-xs</code>

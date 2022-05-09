@@ -1,3 +1,7 @@
+code {
+  @apply dark:text-gray-10;
+}
+
 .code-badge {
   @apply bg-gray-60 py-1 px-2 rounded;
 }

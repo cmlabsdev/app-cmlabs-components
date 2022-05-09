@@ -9,20 +9,20 @@
     <hr class="text-gray-60" />
 
     <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
-      <h2 class="text-dark-60"> IDE Recommendation </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> IDE Recommendation </h2>
 
-      <p>
-        <a href="https://code.visualstudio.com/">VS Code</a>
+      <p class="dark:text-gray-40">
+        <a class="dark:text-gray-20" href="https://code.visualstudio.com/">VS Code</a>
         is the recommended code editor since the editor has the extension called
-        <a href="https://github.com/tailwindlabs/tailwindcss-intellisense.git">Tailwind CSS IntelliSense</a>
+        <a class="dark:text-gray-20" href="https://github.com/tailwindlabs/tailwindcss-intellisense.git">Tailwind CSS IntelliSense</a>
         for tailwindcss classes autocomplete, syntax highlighting,
         and linting. You may choose your own editor which might have
         a similar extension to provide intellisense for tailwindcss classes.
       </p>
 
-      <h2 class="text-dark-60"> Default Configuration File </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Default Configuration File </h2>
 
-      <p>
+      <p class="dark:text-gray-40">
         The package comes with a preconfigured tailwind configuration
         under the <code>/src/tailwind.config.js</code>
       </p>
@@ -184,7 +184,7 @@
 </code></pre>
       </div>
 
-      <p>
+      <p class="dark:text-gray-40">
         The pallete and font family along with the font sizes
         has been configured out of the box, but you do have a favor
         to use your own configuration. This package will merge the
@@ -193,9 +193,9 @@
         and <code class="code-badge">@tailwind/typography</code> plugins out of the box.
       </p>
 
-      <h2 class="text-dark-60"> Custom Configuration File </h2>
+      <h2 class="text-dark-60 dark:text-gray-10"> Custom Configuration File </h2>
 
-      <p>
+      <p class="dark:text-gray-40">
         If you want to specify your own configuration file, make sure to
         place the configuration file in the root directory (one level with the package.json file)
         with a name of <code>tailwind.config.js</code>.

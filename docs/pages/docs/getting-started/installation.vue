@@ -4,7 +4,7 @@
       <h1 class="font-bold text-h2">
         Installation
       </h1>
-      <p class="text-md text-dark-10">
+      <p class="text-md text-dark-10 dark:text-gray-40">
         Using cmlabs components in your Nuxt 2 project is only one command away ✨
       </p>
     </header>
@@ -12,9 +12,9 @@
     <hr class="text-gray-60" />
 
     <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
-      <h2 class="text-dark-60" >Setup </h2>
+      <h2 class="text-dark-60 dark:text-gray-10" >Setup </h2>
 
-      <ol>
+      <ol class="text-dark-60 dark:text-gray-10">
         <li>
           <p> 1. Add <code class="code-badge">@cmlabs/components</code> package to your project. </p>
           <div v-highlight class="my-4">
