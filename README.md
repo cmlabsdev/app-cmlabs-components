@@ -1,4 +1,4 @@
-[![CMLABS Components Design System](./src/thumbnail.png)](https://cmlabs.co)
+[![CMLABS Components Design System](https://raw.githubusercontent.com/cmlabsdev/app-cmlabs-components/main/src/thumbnail.png)](https://cmlabs.co)
 
 # CMLABS Components
 
