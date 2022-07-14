@@ -49,11 +49,12 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   modules: [
     // Docs site here
-    CMLABSComponent
+    CMLABSComponent,
+    '@nuxt/content'
   ],
 
   plugins: [
-    '~/plugins/vue-code-highlight.js'
+    '~/plugins/vue-code-highlight.js',
   ],
 
   // Router configuration: https://go.nuxtjs.dev/router
