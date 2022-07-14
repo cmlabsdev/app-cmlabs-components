@@ -1,6 +1,5 @@
 <p class="text-md text-dark-10 dark:text-gray-40">
-  The alert component provides a wrapper component with opinionated stylings which you can always reset with TailwindCSS classes.  
-  The main focus on this is to provide a reusable styling and markup templating.
+  Lorem ipsum odor amet, consectetuer adipiscing elit. Nullam laoreet euismod litora; mollis efficitur arcu non nisl urna. Volutpat mauris neque pharetra pharetra posuere morbi. Nullam feugiat ex praesent sociosqu et ultricies non ligula. Risus bibendum mollis varius gravida cubilia fames suspendisse. Adipiscing vitae fusce posuere ac turpis. Donec metus massa proin risus laoreet torquent. Parturient iaculis scelerisque mattis aliquam platea dis senectus.
 </p>
 
 ## Basic Usage

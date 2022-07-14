@@ -2,9 +2,6 @@
   <main class="flex flex-col gap-6">
     <header>
       <h1 class="font-bold text-h2">Accordions</h1>
-      <p class="text-md text-dark-10 dark:text-gray-40">
-        Dynamically displaying content with tabs group
-      </p>
     </header>
 
     <hr class="text-gray-60" />

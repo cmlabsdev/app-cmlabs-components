@@ -2,9 +2,6 @@
   <main class="flex flex-col gap-6">
     <header>
       <h1 class="font-bold text-h2">Alerts</h1>
-      <p class="text-md text-dark-10 dark:text-gray-40">
-        Display the useful information as an alert element
-      </p>
     </header>
 
     <hr class="text-gray-60" />

@@ -1,5 +1,5 @@
 <p class="text-md text-dark-10 dark:text-gray-40">
-  Accordion component uses two components: <code>Accordion</code> and <code>Accordion Item</code>. The <code>Accordion item</code> is used to render a tab with its header and content. While the <code>Accordion</code> component itself is a wrapper component to wrap all of the <code>AccordionItem</code> components.
+  Lorem ipsum odor amet, consectetuer adipiscing elit. Nullam laoreet euismod litora; mollis efficitur arcu non nisl urna. Volutpat mauris neque pharetra pharetra posuere morbi. Nullam feugiat ex praesent sociosqu et ultricies non ligula. Risus bibendum mollis varius gravida cubilia fames suspendisse. Adipiscing vitae fusce posuere ac turpis. Donec metus massa proin risus laoreet torquent. Parturient iaculis scelerisque mattis aliquam platea dis senectus.
 </p>
 
 ## Basic Usage

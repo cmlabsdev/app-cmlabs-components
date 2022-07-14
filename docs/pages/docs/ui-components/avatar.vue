@@ -2,9 +2,6 @@
   <main class="flex flex-col gap-6">
     <header>
       <h1 class="font-bold text-h2">Avatars</h1>
-      <p class="text-md text-dark-10 dark:text-gray-40">
-        Render pre-defined avatar component for user profile usecase.
-      </p>
     </header>
 
     <hr class="text-gray-60" />
