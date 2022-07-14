@@ -1,3 +1,7 @@
+.prose * {
+  @apply dark:!text-white;
+}
+
 code {
   @apply dark:text-gray-10;
 }
