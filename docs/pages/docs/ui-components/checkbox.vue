@@ -6,7 +6,7 @@
 
     <hr class="text-gray-60" />
 
-    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
+    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 prose-table:my-0 max-w-none">
       <p class="text-md text-dark-10 dark:text-gray-40">
         Lorem ipsum odor amet, consectetuer adipiscing elit. Nullam laoreet euismod litora; mollis efficitur arcu non nisl urna. Volutpat mauris neque pharetra pharetra posuere morbi. Nullam feugiat ex praesent sociosqu et ultricies non ligula. Risus bibendum mollis varius gravida cubilia fames suspendisse. Adipiscing vitae fusce posuere ac turpis. Donec metus massa proin risus laoreet torquent. Parturient iaculis scelerisque mattis aliquam platea dis senectus.
       </p>

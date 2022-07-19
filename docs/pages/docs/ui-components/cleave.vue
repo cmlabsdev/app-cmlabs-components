@@ -6,7 +6,7 @@
 
     <hr class="text-gray-60" />
 
-    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
+    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 prose-table:my-0 max-w-none">
       <p class="text-md text-dark-10 dark:text-gray-40">
         Cleave components are the wrapper for <a href="https://nosir.github.io/cleave.js/">cleave.js</a> library which formats an input value while inputting any text onto it. To learn more about <a href="https://nosir.github.io/cleave.js/">cleave.js</a>, please refer <a href="https://nosir.github.io/cleave.js/">here</a>. The component also specifies another options that could be configured through props. See the examples below to learn more of the use cases available.
       </p>

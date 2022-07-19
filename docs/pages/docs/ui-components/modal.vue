@@ -9,7 +9,7 @@
 
     <hr class="text-gray-60" />
 
-    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
+    <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 prose-table:my-0 max-w-none">
       <nuxt-content :document="page" />
     </section>
 

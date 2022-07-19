@@ -7,7 +7,7 @@
 
 		<hr class="text-gray-60" />
 
-		<section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
+		<section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 prose-table:my-0 max-w-none">
 			<p class="text-md text-dark-10 dark:text-gray-40">
 				Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris massa quam
 				pretium venenatis at quis interdum eros. Laoreet efficitur nullam
