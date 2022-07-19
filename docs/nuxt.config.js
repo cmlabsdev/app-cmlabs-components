@@ -50,10 +50,12 @@ export default {
   modules: [
     // Docs site here
     CMLABSComponent,
-    '@nuxt/content'
+    '@nuxtjs/axios',
+    '@nuxt/content',
   ],
 
   plugins: [
+    '~/plugins/nuxt-axios.js',
     '~/plugins/vue-code-highlight.js',
   ],
 

@@ -2,15 +2,38 @@
   <main class="flex flex-col gap-6">
     <header>
       <h1 class="font-bold text-h2">Data Tables</h1>
-      <p class="text-md text-dark-10 dark:text-gray-40">
-        Data Tables component ^^
-      </p>
     </header>
 
     <hr class="text-gray-60" />
 
     <section class="prose prose-ol:p-0 prose-li:p-0 prose-p:m-0 max-w-none">
-      <nuxt-content :document="page" />
+      <nuxt-content :document="responseExample" />
+      
+      <cm-data-table api-endpoint="https://kv3.cmlabs.dev/api/team" data-key="teams">
+        <template #default="{ tableData }">
+          <cm-table :table-columns="tableColumns" :table-data="tableData"  />
+        </template>
+      </cm-data-table>
+
+      <nuxt-content :document="basicExample" />
+      
+      <nuxt-content :document="propsExample" />
+
+      <cm-data-table api-endpoint="https://kv3.cmlabs.dev/api/team" data-key="teams" :format-data="formatData">
+        <template #default="{ tableData }">
+          <cm-table :table-columns="tableColumns" :table-data="tableData"  />
+        </template>
+      </cm-data-table>
+
+      <nuxt-content :document="formattingExample" />
+
+      <cm-data-table api-endpoint="https://kv3.cmlabs.dev/api/team" data-key="teams" no-per-page>
+        <template #default="{ tableData }">
+          <cm-table :table-columns="tableColumns" :table-data="tableData"  />
+        </template>
+      </cm-data-table>
+
+      <nuxt-content :document="noPerPageExample" />
     </section>
 
     <footer class="flex items-center justify-between">
@@ -38,10 +61,51 @@ export default {
   name: "DocsUiComponentsDataTablePage",
 
   async asyncData({ $content }) {
-    const page = await $content("data-table").fetch();
+    const basicExample = await $content("data-table/basic-example").fetch();
+    const formattingExample = await $content("data-table/formatting-example").fetch();
+    const noPerPageExample = await $content("data-table/no-per-page-example").fetch();
+    const propsExample = await $content("data-table/props-example").fetch();
+    const responseExample = await $content("data-table/response-example").fetch();
+
     return {
-      page,
+      basicExample,
+      formattingExample,
+      noPerPageExample,
+      propsExample,
+      responseExample,
     };
+  },
+
+  data() {
+    return {
+      tableColumns: [
+        {
+          name: "name",
+          title: "Team Name",
+        },
+        {
+          name: "domain_count",
+          title: "Number of Domains",
+        },
+        {
+          name: "member_count",
+          title: "Number of Members",
+        },
+        {
+          name: "role",
+          title: "Role",
+        },
+      ]
+    }
+  },
+
+  methods: {
+    formatData(data) {
+      const formattedData = [...data]
+      formattedData[0].name = formattedData[0].name + " HEHEHEH";
+      formattedData[0].domain_count = formattedData[0].domain_count + "0000000x";
+      return formattedData
+    }
   }
 }
 </script>
