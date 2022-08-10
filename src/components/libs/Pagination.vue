@@ -81,8 +81,6 @@ export default {
     pages() {
       const range = [];
 
-      console.log(Math.min(this.startPage + this.maxVisibleButtons - 1, this.totalPages))
-
       for (
         let i = this.startPage;
         i <= Math.min(this.startPage + this.maxVisibleButtons - 1, this.totalPages);
