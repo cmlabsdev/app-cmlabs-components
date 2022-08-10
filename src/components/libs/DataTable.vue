@@ -18,38 +18,40 @@
       <slot :table-columns="tableColumns" :table-data="tableData" />
     </div>
 
-    <slot
-      name="footer"
-      :current-count="currentCount"
-      :total-count="totalCount"
-      :current-page="currentPage"
-      :total-page="totalPages"
-    >
-      <cm-data-table-footer>
-        <cm-data-table-count>
-          Showing <strong>{{ currentCount }}</strong> of
-          <strong>{{ totalCount }}</strong>
-        </cm-data-table-count>
+    <template v-if="!$fetchState.pending">
+      <slot
+        name="footer"
+        :current-count="currentCount"
+        :total-count="totalCount"
+        :current-page="currentPage"
+        :total-page="totalPages"
+      >
+        <cm-data-table-footer>
+          <cm-data-table-count>
+            Showing <strong>{{ currentCount }}</strong> of
+            <strong>{{ totalCount }}</strong>
+          </cm-data-table-count>
 
-        <div class="flex items-center gap-8">
-          <div v-if="!noPerPage" class="flex items-center gap-4">
-            <p class="text-sm">Rows per page</p>
-            <cm-select
-              class="!w-20"
-              :options="rowsPerPageOptions"
-              :value="perPage"
-              @update:value="(value) => $emit('change:per-page', value)"
-            />
+          <div class="flex items-center gap-8">
+            <div v-if="!noPerPage" class="flex items-center gap-4">
+              <p class="text-sm">Rows per page</p>
+              <cm-select
+                class="!w-20"
+                :options="rowsPerPageOptions"
+                :value="perPage"
+                @update:value="(value) => $emit('change:per-page', value)"
+              />
+            </div>
+
+            <cm-pagination
+              :total-pages="totalPages"
+              :current-page="currentPage"
+              @pagechanged="(page) => $emit('go:to', page)"
+            ></cm-pagination>
           </div>
-
-          <cm-pagination
-            :total-pages="totalPages"
-            :current-page="currentPage"
-            @pagechanged="(page) => $emit('go:to', page)"
-          ></cm-pagination>
-        </div>
-      </cm-data-table-footer>
-    </slot>
+        </cm-data-table-footer>
+      </slot>
+    </template>
   </div>
 </template>
 
