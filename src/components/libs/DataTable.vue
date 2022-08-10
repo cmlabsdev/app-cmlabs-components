@@ -396,8 +396,15 @@ export default {
       if (page === 1) return false;
       return (page % this.threshold) - 1 === 0;
     },
+    normalizeOutbounds (newOutbounds) {
+      if (newOutbounds.length < this.threshold + 1) {
+        return newOutbounds
+      } else {
+        return normalizeOutbounds(newOutbounds.unshift(newOutbounds[0] - 1))
+      }
+    },
     jumpOutbounds(direction) {
-      this.paginationOutbounds = this.paginationOutbounds.map((outbound) => {
+      let newOutbounds = this.paginationOutbounds.map((outbound) => {
         if (direction === "down") {
           this.$emit('go:to', this.paginationOutbounds[0]) 
           return outbound - this.threshold;
@@ -407,6 +414,10 @@ export default {
           return outbound + this.threshold;
         }
       }).filter((outbound) => outbound !== null)
+
+      this.normalizeOutbounds(newOutbounds)
+
+      this.paginationOutbounds = newOutbounds
     },
   }
 };
