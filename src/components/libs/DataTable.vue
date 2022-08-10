@@ -399,10 +399,10 @@ export default {
     jumpOutbounds(direction) {
       this.paginationOutbounds = this.paginationOutbounds.map((outbound) => {
         if (direction === "down") {
-          $emit('go:to', this.paginationOutbounds[0]) 
+          this.$emit('go:to', this.paginationOutbounds[0]) 
           return outbound - this.threshold;
         } else {
-          $emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
+          this.$emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
           return outbound + this.threshold;
         }
       });
