@@ -405,7 +405,7 @@ export default {
           this.$emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
           return outbound + this.threshold;
         }
-      });
+      }).filter((outbound) => outbound < this.totalPage);
     },
   }
 };
