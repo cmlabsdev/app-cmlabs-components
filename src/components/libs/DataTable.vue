@@ -23,7 +23,7 @@
       :current-count="currentCount"
       :total-count="totalCount"
       :current-page="currentPage"
-      :total-page="totalPage"
+      :total-page="totalPages"
     >
       <cm-data-table-footer>
         <cm-data-table-count>
@@ -42,61 +42,11 @@
             />
           </div>
 
-          <cm-pagination>
-            <template #prev>
-              <cm-pagination-button
-                :is-disabled="+currentPage === 1"
-                @click="handleClick(+currentPage - 1)"
-              >
-                «
-              </cm-pagination-button>
-            </template>
-
-            <template v-if="totalPage <= threshold">
-              <cm-pagination-button
-                v-for="page in Number(totalPage)"
-                :key="page"
-                :is-active="page === +currentPage"
-                square
-                @click="() => handleClick(+page)"
-              >
-                {{ page }}
-              </cm-pagination-button>
-            </template>
-
-            <template v-else>
-              <cm-pagination-button
-                v-if="showPrevDots"
-                @click="jumpOutbounds('down')"
-                >...</cm-pagination-button
-              >
-
-              <cm-pagination-button
-                v-for="page in paginationOutbounds"
-                :key="page"
-                :is-active="page === +currentPage"
-                square
-                @click="() => handleClick(+page)"
-              >
-                {{ page }}
-              </cm-pagination-button>
-
-              <cm-pagination-button
-                v-if="showNextDots"
-                @click="jumpOutbounds('up')"
-                >...</cm-pagination-button
-              >
-            </template>
-
-            <template #next>
-              <cm-pagination-button
-                :is-disabled="!+totalPage || totalPage === currentPage"
-                @click="handleClick(+currentPage + 1)"
-              >
-                »
-              </cm-pagination-button>
-            </template>
-          </cm-pagination>
+          <cm-pagination
+            :total-pages="totalPages"
+            :current-page="currentPage"
+            @pagechanged="(page) => $emit('go:to', page)"
+          ></cm-pagination>
         </div>
       </cm-data-table-footer>
     </slot>
@@ -215,8 +165,6 @@ export default {
 
   data() {
     return {
-      threshold: 3,
-      paginationOutbounds: [1, 2, 3, 4],
       /**
        * Replica of the tableOption property.
        * This object is used to avoid mutating original data.
@@ -278,7 +226,7 @@ export default {
       return true;
     },
     showNextDots() {
-      if (this.paginationOutbounds.includes(this.totalPage)) return false;
+      if (this.paginationOutbounds.includes(this.totalPages)) return false;
       return true;
     },
     /**
@@ -345,7 +293,7 @@ export default {
      * Total page from the pagination.
      * Automatically synced with the server response.
      */
-    totalPage() {
+    totalPages() {
       return this.pagination.total_page || 0;
     },
   },
@@ -378,38 +326,5 @@ export default {
       this.$fetch();
     });
   },
-
-  methods: {
-    handleClick (page) {
-      const direction = +page < +this.currentPage ? "down" : "up"
-
-      if (+page !== +this.totalPage) {
-        const isPageBreaker = this.isPageBreaker(+page)
-        if (isPageBreaker) {
-          this.jumpOutbounds(direction)
-        }
-      }
-
-      this.$emit('go:to', +page)
-    },
-    isPageBreaker(page) {
-      if (page === 1) return false;
-      return (page % this.threshold) - 1 === 0;
-    },
-    jumpOutbounds(direction) {
-      const newOutbounds = this.paginationOutbounds.map((outbound) => {
-        if (direction === "down") {
-          this.$emit('go:to', this.paginationOutbounds[0]) 
-          return outbound - this.threshold;
-        } else {
-          this.$emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
-          if (outbound + this.threshold > this.totalPage) return null
-          return outbound + this.threshold;
-        }
-      })
-
-      this.paginationOutbounds = newOutbounds
-    },
-  }
 };
 </script>
