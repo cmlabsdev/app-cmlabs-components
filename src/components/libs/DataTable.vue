@@ -406,7 +406,7 @@ export default {
           if (outbound + this.threshold > this.totalPage) return null
           return outbound + this.threshold;
         }
-      })
+      }).filter((outbound) => outbound !== null)
     },
   }
 };
