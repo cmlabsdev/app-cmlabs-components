@@ -403,9 +403,10 @@ export default {
           return outbound - this.threshold;
         } else {
           this.$emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
+          if (outbound + this.threshold > this.totalPage) return null
           return outbound + this.threshold;
         }
-      }).filter((outbound) => outbound < this.totalPage);
+      })
     },
   }
 };
