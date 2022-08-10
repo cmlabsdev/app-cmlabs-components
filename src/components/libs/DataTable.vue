@@ -400,7 +400,8 @@ export default {
       if (newOutbounds.length < this.threshold + 1) {
         return newOutbounds
       } else {
-        return this.normalizeOutbounds(newOutbounds.unshift(newOutbounds[0] - 1))
+        const outbounds = newOutbounds.unshift(newOutbounds[0] - 1)
+        return this.normalizeOutbounds(outbounds)
       }
     },
     jumpOutbounds(direction) {
