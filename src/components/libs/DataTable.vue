@@ -61,14 +61,21 @@
               </cm-pagination-button>
             </template>
 
-            <cm-pagination-button
-              v-for="page in Number(totalPage)"
-              :key="page"
-              :is-active="page === Number(currentPage)"
-              @click="$emit('go:to', (+page))"
-            >
-              {{ page }}
-            </cm-pagination-button>
+            <template v-if="totalPage < 4">
+              <cm-pagination-button
+                v-for="page in Number(totalPage)"
+                :key="page"
+                :is-active="page === Number(currentPage)"
+                square
+                @click="$emit('go:to', (+page))"
+              >
+                {{ page }}
+              </cm-pagination-button>
+            </template>
+
+            <template v-else>
+              
+            </template>
 
             <template #next>
               <cm-pagination-button

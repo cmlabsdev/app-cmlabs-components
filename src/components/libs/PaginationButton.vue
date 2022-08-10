@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-auto h-full flex items-center justify-center py-1 px-3 cm-transition"
+    class="w-auto h-full flex items-center justify-center cm-transition"
     :class="masterClass"
     :disabled="isDisabled"
     @click="$emit('click')"
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'CmPaginationButton',
+  name: "CmPaginationButton",
 
   props: {
     /**
@@ -20,7 +20,7 @@ export default {
      */
     isActive: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * Is the item disabled?
@@ -28,23 +28,40 @@ export default {
      */
     isDisabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
+    /**
+     * Is the button should be square?
+     */
+    square: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   emits: {
-    click: null
+    click: null,
   },
 
   computed: {
     /**
      * The component class.
      */
-    masterClass () {
-      if (this.isDisabled) { return 'text-gray-80 dark:text-dark-60 cursor-not-allowed' }
-      if (this.isActive) { return 'bg-primary-60 dark:bg-primary-40 text-white' }
-      return 'text-primary-60 hover:bg-primary-60 hover:text-white dark:text-primary-40 dark:hover:bg-primary-40 dar dark:hover:text-white'
-    }
-  }
-}
+    masterClass() {
+      if (this.isDisabled) {
+        return `text-gray-80 dark:text-dark-60 cursor-not-allowed ${
+          this.square ? "aspect-square" : "py-1 px-3"
+        }`;
+      }
+      if (this.isActive) {
+        return `bg-primary-60 dark:bg-primary-40 text-white ${
+          this.square ? "aspect-square" : "py-1 px-3"
+        }`;
+      }
+      return `text-primary-60 hover:bg-primary-60 hover:text-white dark:text-primary-40 dark:hover:bg-primary-40 dar dark:hover:text-white ${
+        this.square ? "aspect-square" : "py-1 px-3"
+      }`;
+    },
+  },
+};
 </script>
