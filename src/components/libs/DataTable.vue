@@ -56,9 +56,9 @@
               <cm-pagination-button
                 v-for="page in Number(totalPage)"
                 :key="page"
-                :is-active="page === Number(currentPage)"
+                :is-active="page === +currentPage"
                 square
-                @click="$emit('go:to', +page)"
+                @click="() => handleClick(+page)"
               >
                 {{ page }}
               </cm-pagination-button>
@@ -76,7 +76,7 @@
                 :key="page"
                 :is-active="page === +currentPage"
                 square
-                @click="() => $emit('go:to', +page)"
+                @click="() => handleClick(+page)"
               >
                 {{ page }}
               </cm-pagination-button>
@@ -399,11 +399,10 @@ export default {
     jumpOutbounds(direction) {
       this.paginationOutbounds = this.paginationOutbounds.map((outbound) => {
         if (direction === "down") {
-          this.currentPage = this.paginationOutbounds[0];
+          $emit('go:to', this.paginationOutbounds[0]) 
           return outbound - this.threshold;
         } else {
-          this.currentPage =
-            this.paginationOutbounds[this.paginationOutbounds.length - 1];
+          $emit('go:to', this.paginationOutbounds[this.paginationOutbounds.length - 1])
           return outbound + this.threshold;
         }
       });
