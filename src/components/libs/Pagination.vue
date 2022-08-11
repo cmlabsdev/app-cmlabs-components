@@ -72,9 +72,10 @@ export default {
         return 1;
       }
       if (this.isInLastPage) {
-        const start = this.totalPages - (this.maxVisibleButtons - 1)
-        if (start === 0) return 1
-        else return start
+        return this.currentPage - 1;
+        // const start = this.totalPages - (this.maxVisibleButtons - 1)
+        // if (start === 0) return 1
+        // else return start
       }
       return this.currentPage - 1;
     },
